@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <article id="selection-card">
+      <!-- Rating state start -->
+      <div class="selection-card_icon">
+        <img src="images/icon-star.svg" alt="Star Icon">
+      </div>
+      <div class="selection-card_content">
+        <div class="selection-card_title">
+          <h1>How did we do?</h1>
+        </div>
+        <div class="selection-card_description">
+          <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+      </div>
+      <div class="selection-card_selection_buttons">
+        <span class="selection_button">1</span>
+        <span class="selection_button">2</span>
+        <span class="selection_button">3</span>
+        <span class="selection_button">4</span>
+        <span class="selection_button">5</span>
+      </div>
+      <div class="selection-card_submit">
+        <button type="button" id="submit_button">Submit</button>
+      </div>
+      <!-- Rating state end -->
+    </article>
+    <!-- Thank you state start -->
+    <article id="state-card" style="display: none;">
+      <div class="state-card_img">
+        <img src="images/illustration-thank-you.svg" alt="Thank you Image">
+      </div>
+      <div class="state-card_selected_item">
+        <p>You selected <span id="rate"></span> out of 5</p>
+      </div>
+      <div class="state-card_content">
+        <div class="state-card_title">
+          <h1>Thank you!</h1>
+        </div>
+        <div class="state-card_description">
+          <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+    </article>
+    <!-- Thank you state end -->
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Elif Seyhan</a>.
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 15px;
+    color: var(--white);
+    background-color: var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+}
+
+#selection-card, #state-card{
+    width: 26rem;
+    background-color: var(--dark-blue);
+    padding: 2.2rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.selection-card_content, .selection-card_selection_buttons, .selection-card_title, .state-card_title{
+    margin-top: 1rem;
+}
+
+.selection-card_title, .state-card_title{
+    font-size: 18px;
+}
+
+.selection-card_description, .state-card_description{
+    color: var(--light-grey);
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+.selection-card_description{
+    margin-bottom: 2rem;
+}
+
+.selection-card_selection_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selection-card_icon, .selection_button{
+    background-color: hsl(213, 19%, 23%);
+    color: var(--light-grey);
+    display: inline-flex;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.selection_button:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.selection_button.selected{
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+
+#submit_button{
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+#submit_button:hover{
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+#state-card{
+    text-align: center;
+}
+
+.state-card_selected_item{
+    display: inline-block;
+    color: var(--orange);
+    background-color: hsl(213, 19%, 23%);
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 420px) {
+    #selection-card, #state-card{
+        width: auto;
+        margin: 0 2rem;
+    }
+
+    .selection_button{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
